@@ -21,7 +21,7 @@ function NavBar() {
         },
     ]
   return (
-    <div className='p-3 flex justify-between items-center w-full border-b-[0.1px] border-[#f5f5f5]'>
+    <div className='p-3 flex justify-between items-center w-full sticky top-0'>
         <Image src={'./logo.svg'} alt='logo' width={250} height={88}/>
         <div className='flex gap-4 font-semibold'>
             {navs.map((nav,ind)=>(
