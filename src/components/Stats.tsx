@@ -9,7 +9,7 @@ const statsData = [
 
 function Stats() {
   return (
-    <div className="py-16">
+    <div className="pt-16">
       <div className="mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-[#F5F5F5]">
         {statsData.map((stat, index) => (
           <div key={index} className="text-center px-4"> {/* Added horizontal padding */}
