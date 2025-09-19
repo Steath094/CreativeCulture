@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero/>
         <div className="p-2"></div>
         <Banner/>
+        <About/>
       </div>
     </div>
   );
