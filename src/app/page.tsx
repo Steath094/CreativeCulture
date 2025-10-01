@@ -1,8 +1,11 @@
 import About from "@/components/About";
 import Banner from "@/components/Banner";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import ServicesSection from "@/components/Service";
+import TestimonialSlider from "@/components/Testimonial";
 import WorkSection from "@/components/Work";
 
 export default function Home() {
@@ -17,6 +20,11 @@ export default function Home() {
         <About/>
         <ServicesSection/>
         <WorkSection/>
+        <div className="p-2"></div>
+        <Banner/>
+        <TestimonialSlider/>
+        <ContactForm/>
+        <Footer/>
       </div>
     </div>
   );
