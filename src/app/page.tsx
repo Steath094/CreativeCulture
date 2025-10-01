@@ -3,7 +3,6 @@ import Banner from "@/components/Banner";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
 import ServicesSection from "@/components/Service";
-import Two from "@/components/two";
 import WorkSection from "@/components/Work";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
         <About/>
         <ServicesSection/>
         <WorkSection/>
-        <Two/>
       </div>
     </div>
   );
