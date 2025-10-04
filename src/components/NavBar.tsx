@@ -14,19 +14,19 @@ function NavBar() {
   ];
 
   return (
-    <div className="p-3 flex justify-between items-center w-full top-0">
+    <nav className="p-4 flex justify-between items-center w-full top-0 bg-transparent z-50 relative">
       {/* Responsive Logo */}
       <Image
         src="/logo.svg"
         alt="logo"
         width={250}
         height={88}
-        className="w-28 sm:w-36 md:w-44 lg:w-52 h-auto"
+        className="w-28 sm:w-36 md:w-40 lg:w-48 xl:w-52 h-auto"
         priority
       />
 
-      {/* Desktop Nav */}
-      <div className="hidden md:flex gap-6 font-semibold text-white">
+      {/* Desktop Navigation (visible only on lg and up) */}
+      <div className="hidden lg:flex gap-8 font-semibold text-white">
         {navs.map((nav, ind) => (
           <a
             key={ind}
@@ -38,23 +38,23 @@ function NavBar() {
         ))}
       </div>
 
-      {/* Mobile Hamburger */}
+      {/* Hamburger Icon (visible below lg breakpoint) */}
       <button
-        className="md:hidden p-2 text-white"
+        className="lg:hidden p-2 text-white"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
         {isOpen ? <X size={28} /> : <Menu size={28} />}
       </button>
 
-      {/* Mobile Menu */}
+      {/* Mobile / Tablet Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-16 right-3 bg-[#10012B]/90 shadow-lg rounded-lg w-48 flex flex-col p-4 gap-3 md:hidden z-50">
+        <div className="absolute top-16 right-4 bg-[#10012B]/95 backdrop-blur-md shadow-lg rounded-xl w-56 flex flex-col p-4 gap-3 lg:hidden z-50 border border-white/10">
           {navs.map((nav, ind) => (
             <a
               key={ind}
               href={nav.to}
-              className="text-lg font-semibold text-white hover:text-[#7ED957] cursor-pointer transition-colors"
+              className="text-lg font-semibold text-white hover:text-[#7ED957] transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {nav.name}
@@ -62,7 +62,7 @@ function NavBar() {
           ))}
         </div>
       )}
-    </div>
+    </nav>
   );
 }
 

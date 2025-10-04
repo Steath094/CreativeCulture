@@ -1,10 +1,9 @@
-import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
 function Hero() {
   return (
-    <div className='flex items-center py-22'>
+    <div className='flex items-center py-24'>
         <div className='flex gap-2 w-full'>
             <div className='w-9/20 flex flex-col gap-8'>
                 <div>
