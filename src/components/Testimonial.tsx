@@ -132,7 +132,7 @@ export default function TestimonialSlider() {
                   <h3 className="text-2xl sm:text-3xl font-semibold">{currentTestimonial.name}</h3>
                   <p className="text-gray-400 mb-4">{currentTestimonial.role}</p>
                   <p className="text-lg text-gray-200 leading-relaxed">
-                    "{currentTestimonial.text}"
+                    &ldquo;{currentTestimonial.text}&rdquo;
                   </p>
                 </motion.div>
               </AnimatePresence>

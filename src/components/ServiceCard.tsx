@@ -1,4 +1,3 @@
-import ArrowIcon from '../../public/arrow.svg';
 import React from 'react';
 import Image from 'next/image';
 interface ServiceCardProps {
@@ -21,7 +20,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   const textColor = isHighlighted ? 'text-[#10012B]' : 'text-gray-300';
   const borderColor = isHighlighted ? 'border-[#10012B]' : 'border-[#4A2F6B]';
   const linkColor = isHighlighted ? 'text-[#10012B]' : 'text-[#7ED957]';
-  const arrowColor = isHighlighted ? '#10012B' : '#7ED957';
 
   const Divider = () => <hr className={`my-4 ${borderColor}`} />;
 
