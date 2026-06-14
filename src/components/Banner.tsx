@@ -4,8 +4,11 @@ import React from "react";
 function Banner() {
   const services = [
     "Meme Marketing",
-    "Social Media Marketing",
+    "Influencer Marketing",
+    "Social Media Management",
     "Content Marketing",
+    "Digital Marketing",
+    "Celebrity PR"
   ];
 
   return (
