@@ -19,7 +19,7 @@ function ServicesSection() {
           <div>
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#7ED957] text-[#10012B] text-lg font-semibold rounded-4xl hover:bg-[#6cc546] transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#5454C5] text-[#10012B] text-lg font-semibold rounded-4xl hover:bg-[#6cc546] transition-colors duration-200"
             >
               View All Services
               <Image src={'./arrow.svg'} alt='arrow' width={26} height={10} />

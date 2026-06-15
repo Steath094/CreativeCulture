@@ -17,7 +17,7 @@ function NavBar() {
     <nav className="p-4 flex justify-between items-center w-full top-0 bg-transparent z-50 relative">
       {/* Responsive Logo */}
       <Image
-        src="/logo.svg"
+        src="/logo.png"
         alt="logo"
         width={250}
         height={88}
@@ -31,7 +31,7 @@ function NavBar() {
           <a
             key={ind}
             href={nav.to}
-            className="text-lg hover:text-[#7ED957] cursor-pointer transition-colors"
+            className="text-lg hover:text-[#5454C5] cursor-pointer transition-colors"
           >
             {nav.name}
           </a>
@@ -54,7 +54,7 @@ function NavBar() {
             <a
               key={ind}
               href={nav.to}
-              className="text-lg font-semibold text-white hover:text-[#7ED957] transition-colors"
+              className="text-lg font-semibold text-white hover:text-[#5454C5] transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {nav.name}

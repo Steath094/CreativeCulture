@@ -52,19 +52,19 @@ const stats = [
 ];
 
 const campaigns = [
-  { title: "Kisi Ka Bhai Kisi Ki Jaan", image: "/card.png", tone: "bg-[#7ED957]" },
-  { title: "The Kashmir Files", image: "/card1.png", tone: "bg-[#ffcf33]" },
-  { title: "Sirf Ek Bandaa Kaafi Hai", image: "/card2.png", tone: "bg-[#40d6ff]" },
-  { title: "Farzi", image: "/cook1.webp", tone: "bg-[#ff6fb1]" },
-  { title: "Citadel", image: "/cook2.webp", tone: "bg-[#9b7cff]" },
-  { title: "Culpa Tuya", image: "/cook3.webp", tone: "bg-[#7ED957]" },
-  { title: "Gadar 2", image: "/cook4.webp", tone: "bg-[#ffcf33]" },
-  { title: "Haddi", image: "/cook5.webp", tone: "bg-[#40d6ff]" },
+  { title: "Farzi", image: "/campaigns/Farzi.jpeg" },
+  { title: "The Kashmir Files", image: "/campaigns/kashmir-files.png" },
+  { title: "Sirf Ek Bandaa Kaafi Hai", image: "/campaigns/sirf-ek-bandaa-kaafi-hai.png" },
+  { title: "Farzi 1", image: "/campaigns/farzi.png"},
+  { title: "Citadel", image: "/campaigns/citadel.png"},
+  { title: "Culpa Tuya", image: "/campaigns/culpa-tuya.png"},
+  { title: "Gadar 2", image: "/campaigns/gadar2.png"},
+  { title: "Haddi", image: "/campaigns/haddi.png"},
 ];
 
 const clients = [
   { tag: "#Metaverse", by: "Zee5", image: "/clients/zee5.jpeg" },
-  { tag: "#Polly Doll", by: "Netflix", image: "/clients/netflix.svg",className: "p-2" },
+  { tag: "#Polly Doll", by: "Netflix", image: "/clients/Netflix.svg",className: "p-2" },
   { tag: "#Alec Art", by: "Amazon Prime", image: "/clients/AmazonPrime.svg",className: "p-2" },
   { tag: "#Toxic Poeth", by: "MX Player", image: "/clients/mxPlayer.png",className: "p-2" },
   { tag: "#Saphyre", by: "Boat", image: "/clients/boat.svg",className: "p-2" },
@@ -153,7 +153,7 @@ function PillButton({
 }) {
   const className =
     variant === "solid"
-      ? "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#7ED957] px-6 py-3 text-sm font-bold uppercase text-[#10012B] shadow-[0_12px_30px_rgba(126,217,87,0.24)]"
+      ? "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#5454C5] px-6 py-3 text-sm font-bold uppercase text-[#10012B] shadow-[0_12px_30px_rgba(126,217,87,0.24)]"
       : "group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-bold uppercase text-white";
 
   const content = (
@@ -201,12 +201,12 @@ function SectionHeading({
   return (
     <div className={align === "center" ? "mx-auto max-w-4xl text-center" : "max-w-3xl"}>
       {kicker ? (
-        <p className="mb-4 inline-flex items-center gap-2 text-sm font-bold uppercase text-[#7ED957]">
-          <span className="h-2 w-2 rounded-full bg-[#7ED957]" />
+        <p className="mb-4 inline-flex items-center gap-2 text-lg font-bold uppercase text-[#5454C5]">
+          <span className="h-2 w-2 rounded-full bg-[#5454C5]" />
           {kicker}
         </p>
       ) : null}
-      <h2 className="text-4xl font-black uppercase leading-[0.95] text-white md:text-6xl">
+      <h2 className="text-4xl font-black uppercase leading-[0.95] text-[#639CD9] md:text-6xl">
         {title}
       </h2>
     </div>
@@ -237,15 +237,15 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#10012B]/82 backdrop-blur-xl">
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
           <a href="#home" className="flex items-center gap-3" onClick={closeMenu}>
-            {/* <span className="grid h-11 w-11 place-items-center rounded-[8px] bg-[#7ED957] text-xl font-black text-[#10012B]">
+            {/* <span className="grid h-11 w-11 place-items-center rounded-[8px] bg-[#5454C5] text-xl font-black text-[#10012B]">
               CC
             </span>
             <span className="leading-none">
               <span className="block text-lg font-black uppercase">Creative</span>
-              <span className="block text-lg font-black uppercase text-[#7ED957]">Culture</span>
+              <span className="block text-lg font-black uppercase text-[#5454C5]">Culture</span>
             </span> */}
             <div className="text-center md:text-left">
-                <Image src={'./logo.svg'} alt='logo' width={150} height={88}/>
+                <Image src="/logo.png" alt='logo' width={125} height={88}/>
             </div>
           </a>
 
@@ -254,15 +254,15 @@ export default function Home() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-bold uppercase text-white/78 hover:text-[#7ED957]"
+                className="text-sm font-bold uppercase text-white/78 hover:text-[#5454C5]"
               >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden items-center gap-3 lg:flex">
-            <PillButton href="mailto:business.creativeculture@gmail.com">Mail Us</PillButton>
+          <div className="hidden items-center gap-3 lg:flex color-[#639CD9]">
+            <PillButton  href="mailto:business.creativeculture@gmail.com">Mail Us</PillButton>
           </div>
 
           <button
@@ -298,7 +298,7 @@ export default function Home() {
                 <a
                   href="mailto:business.creativeculture@gmail.com"
                   onClick={closeMenu}
-                  className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#7ED957] px-6 py-3 text-sm font-bold uppercase text-[#10012B]"
+                  className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#5454C5] px-6 py-3 text-sm font-bold uppercase text-[#10012B]"
                 >
                   Mail Us
                   <Mail className="h-4 w-4" />
@@ -317,8 +317,8 @@ export default function Home() {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative z-10"
         >
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold uppercase text-[#7ED957]">
-            <span className="h-2 w-2 rounded-full bg-[#7ED957]" />
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-bold uppercase text-[#5454C5]">
+            <span className="h-2 w-2 rounded-full bg-[#5454C5]" />
             Digital Marketing Agency
           </p>
           <AnimatePresence mode="wait">
@@ -329,11 +329,11 @@ export default function Home() {
               exit={{ opacity: 0, y: -18 }}
               transition={{ duration: 0.35 }}
             >
-              <p className="mb-2 text-sm font-bold uppercase text-white/55">
+              {/* <p className="mb-2 text-sm font-bold uppercase text-white/55">
                 {activeHero?.eyebrow}
-              </p>
-              <h1 className="max-w-4xl text-3xl font-black uppercase leading-[0.9] text-white md:text-4xl lg:text-6xl">
-                {activeHero?.title}
+              </p> */}
+              <h1 className="max-w-4xl text-3xl font-black uppercase leading-[0.9] text-white md:text-4xl lg:text-5xl">
+                Making <h2 className="text-7xl font-extrabold bg-gradient-to-r from-[#5454C5]  to-[#639CD9] bg-clip-text text-transparent">Brands </h2> Part of Everyday Culture
               </h1>
             </motion.div>
           </AnimatePresence>
@@ -350,7 +350,7 @@ export default function Home() {
         </motion.div>
 
         <div className="relative min-h-[500px] lg:min-h-[650px]">
-          <div className="absolute left-1/2 top-1/2 h-[86%] w-[86%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#7ED957]/45" />
+          <div className="absolute left-1/2 top-1/2 h-[86%] w-[86%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#5454C5]/45" />
           <div className="absolute left-[10%] top-[4%] h-24 w-24 rounded-full border border-white/20" />
           <div className="absolute bottom-[10%] right-[5%] h-36 w-36 rounded-full border border-dashed border-white/20" />
 
@@ -377,7 +377,7 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, -14, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute left-0 top-[15%] h-48 w-36 overflow-hidden rounded-[8px] border border-white/15 bg-[#7ED957] p-2 shadow-2xl"
+            className="absolute left-0 top-[15%] h-48 w-36 overflow-hidden rounded-[8px] border border-white/15 bg-[#5454C5] p-2 shadow-2xl"
           >
             <div className="relative h-full overflow-hidden rounded-[6px]">
               <Image src="/cook1.webp" alt="Campaign visual" fill sizes="144px" className="object-cover" />
@@ -408,7 +408,7 @@ export default function Home() {
                 key={frame.title}
                 onClick={() => setHeroIndex(index)}
                 className={`h-2.5 rounded-full transition-all ${
-                  heroIndex === index ? "w-10 bg-[#7ED957]" : "w-2.5 bg-white/35"
+                  heroIndex === index ? "w-10 bg-[#5454C5]" : "w-2.5 bg-white/35"
                 }`}
               />
             ))}
@@ -416,7 +416,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <div className="marquee-band border-y border-[#7ED957]/35 bg-[#7ED957] py-4 text-[#10012B]">
+      {/* <div className="marquee-band border-y border-[#5454C5]/35 bg-[#5454C5] py-4 text-[#10012B]">
         <div className="animate-marquee flex w-max items-center gap-8">
           {["Meme Marketing", "Social Media Marketing", "Content Marketing", "Influencer Seeding", "Pop Culture Strategy", "Movie Launches"].map(
             (item) => (
@@ -438,7 +438,16 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr]"
         >
-          <SectionHeading kicker="About" title="Building Brands People Talk About" align="left" />
+          {/* <SectionHeading kicker="About" title="Building Brands People Talk About" align="left" /> */}
+          <div className={"max-w-3xl"}>
+            <p className="mb-4 inline-flex items-center gap-2 text-lg font-bold uppercase text-[#5454C5]">
+              <span className="h-2 w-2 rounded-full bg-[#5454C5]" />
+              About
+            </p>
+            <h2 className="text-4xl font-black uppercase leading-[0.95] text-white md:text-6xl">
+            <h2 className="text-7xl font-extrabold bg-gradient-to-r from-[#5454C5]  to-[#639CD9] bg-clip-text text-transparent">Building </h2> Brands People Talk About
+            </h2>
+          </div>
           <div className="grid gap-6 text-lg leading-8 text-white/72">
             <p>
               Creative Culture helps brands stay relevant through culture-driven marketing strategies.
@@ -448,7 +457,7 @@ export default function Home() {
             <div className="grid gap-4 sm:grid-cols-3">
               {stats.map((stat) => (
                 <div key={stat.label} className="border-l border-white/18 pl-5">
-                  <p className="text-5xl font-black text-[#7ED957]">{stat.value}</p>
+                  <p className="text-5xl font-black text-[#5454C5]">{stat.value}</p>
                   <p className="mt-2 text-sm font-bold uppercase text-white/65">{stat.label}</p>
                 </div>
               ))}
@@ -486,7 +495,7 @@ export default function Home() {
                       sizes="(max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition duration-500 group-hover:scale-105"
                     />
-                    <div className={`absolute left-4 top-4 h-10 w-10 rounded-full ${campaign.tone}`} />
+                    <div className={`absolute left-4 top-4 h-10 w-10 rounded-full`} />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10012B] to-transparent p-5 pt-20">
                       <h3 className="text-2xl font-black uppercase leading-none">{campaign.title}</h3>
                     </div>
@@ -528,7 +537,7 @@ export default function Home() {
                 </div>
                 <div className="p-5">
                   <h3 className="text-xl font-black">{client?.by}</h3>
-                  {/* <p className="mt-1 text-sm font-bold uppercase text-[#7ED957]">{client.by}</p> */}
+                  {/* <p className="mt-1 text-sm font-bold uppercase text-[#5454C5]">{client.by}</p> */}
                 </div>
               </motion.article>
             ))}
@@ -548,8 +557,8 @@ export default function Home() {
                 whileHover={{ x: 4 }}
                 className={`grid w-full gap-5 rounded-[8px] border p-5 text-left transition md:grid-cols-[120px_1fr_220px] md:items-center ${
                   activeService === index
-                    ? "border-[#7ED957] bg-[#7ED957] text-[#10012B]"
-                    : "border-white/12 bg-white/6 text-white hover:border-[#7ED957]/60"
+                    ? "border-[#5454C5] bg-[#5454C5] text-[#10012B]"
+                    : "border-white/12 bg-white/6 text-white hover:border-[#5454C5]/60"
                 }`}
               >
                 <span className="text-4xl font-black">{service.number}</span>
@@ -576,7 +585,7 @@ export default function Home() {
               type="button"
               aria-label="Previous work"
               onClick={prevWork}
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 text-white hover:border-[#7ED957] hover:text-[#7ED957]"
+              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 text-white hover:border-[#5454C5] hover:text-[#5454C5]"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -584,7 +593,7 @@ export default function Home() {
               type="button"
               aria-label="Next work"
               onClick={nextWork}
-              className="grid h-12 w-12 place-items-center rounded-full bg-[#7ED957] text-[#10012B] hover:bg-white"
+              className="grid h-12 w-12 place-items-center rounded-full bg-[#5454C5] text-[#10012B] hover:bg-white"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -603,7 +612,7 @@ export default function Home() {
             >
               <Image src={activeWork.image} alt={activeWork.title} fill sizes="60vw" className="object-cover" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#10012B] to-transparent p-8 pt-28">
-                <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#7ED957] px-4 py-2 text-xs font-black uppercase text-[#10012B]">
+                <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-[#5454C5] px-4 py-2 text-xs font-black uppercase text-[#10012B]">
                   <Play className="h-3 w-3 fill-current" />
                   Work Sneakpeek
                 </p>
@@ -619,7 +628,7 @@ export default function Home() {
                 key={item.title}
                 onClick={() => setWorkIndex(index)}
                 className={`grid grid-cols-[96px_1fr] items-center gap-4 rounded-[8px] border p-3 text-left ${
-                  workIndex === index ? "border-[#7ED957] bg-white/10" : "border-white/12 bg-white/5"
+                  workIndex === index ? "border-[#5454C5] bg-white/10" : "border-white/12 bg-white/5"
                 }`}
               >
                 <span className="relative h-24 overflow-hidden rounded-[8px]">
@@ -658,7 +667,7 @@ export default function Home() {
       {/* <footer className="border-t border-white/10 px-5 py-8 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
           <a href="#home" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-[8px] bg-[#7ED957] font-black text-[#10012B]">
+            <span className="grid h-10 w-10 place-items-center rounded-[8px] bg-[#5454C5] font-black text-[#10012B]">
               CC
             </span>
             <span className="text-sm font-black uppercase">Creative Culture</span>
@@ -676,7 +685,7 @@ export default function Home() {
                 key={label}
                 aria-label={label}
                 href="#home"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-[#7ED957] hover:border-[#7ED957] hover:bg-[#7ED957] hover:text-[#10012B]"
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-[#5454C5] hover:border-[#5454C5] hover:bg-[#5454C5] hover:text-[#10012B]"
               >
                 <Icon className="h-4 w-4" />
               </a>

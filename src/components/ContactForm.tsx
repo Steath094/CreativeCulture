@@ -56,7 +56,7 @@ export default function ContactForm() {
                     placeholder="Ex. Jhon Doe"
                     onChange={handleChange}
                     required
-                    className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#A0E85B]"
+                    className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#5454C5]"
                   />
                 </div>
                 <div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
                     placeholder="example@gmail.com"
                     onChange={handleChange}
                     required
-                    className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#A0E85B]"
+                    className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#5454C5]"
                   />
                 </div>
                 <div>
@@ -84,7 +84,7 @@ export default function ContactForm() {
                     placeholder="Enter Your Phone Number"
                     onChange={handleChange}
                     required
-                    className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#A0E85B]"
+                    className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#5454C5]"
                   />
                 </div>
                 <div>
@@ -96,7 +96,7 @@ export default function ContactForm() {
                     name="service"
                     onChange={handleChange}
                     required
-                    className="w-full bg-[#3a294d] text-white p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#A0E85B]"
+                    className="w-full bg-[#3a294d] text-white p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#5454C5]"
                   >
                     <option value="">Select Services</option>
                     <option value="web-design">Web Design</option>
@@ -117,13 +117,13 @@ export default function ContactForm() {
                   placeholder="Enter Here..."
                   onChange={handleChange}
                   required
-                  className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#A0E85B]"
+                  className="w-full bg-[#3a294d] text-white placeholder-gray-400 p-3 rounded-lg border border-transparent focus:outline-none focus:ring-2 focus:ring-[#5454C5]"
                 ></textarea>
               </div>
               <div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto bg-[#A0E85B] text-[#1E0A30] font-bold py-3 px-8 rounded-lg hover:bg-white transition-colors duration-300"
+                  className="w-full sm:w-auto bg-[#5454C5] text-[#1E0A30] font-bold py-3 px-8 rounded-lg hover:bg-white transition-colors duration-300"
                 >
                   Send Messages
                 </button>

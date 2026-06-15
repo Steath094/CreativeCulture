@@ -15,12 +15,12 @@ const ProgressLine: React.FC<ProgressLineProps> = ({ label, percentage }) => {
       <div className="relative w-full bg-gray-700 rounded-full h-3">
         {/* Green progress bar */}
         <div
-          className="h-3 rounded-full bg-[#7ED957]"
+          className="h-3 rounded-full bg-[#5454C5]"
           style={{ width: `${percentage}%` }}
         ></div>
         {/* White circular handle at the end */}
         <div
-          className="absolute top-1/2 -translate-y-1/2 w-7 h-7 bg-white border-2 border-[#7ED957] rounded-full"
+          className="absolute top-1/2 -translate-y-1/2 w-7 h-7 bg-white border-2 border-[#5454C5] rounded-full"
           style={{ left: `calc(${percentage}% - 14px)` }}
         ></div>
       </div>

@@ -142,14 +142,14 @@ export default function TestimonialSlider() {
             <div className="mt-8 flex justify-center md:justify-start gap-4">
               <button
                 onClick={handlePrev}
-                className="bg-[#A0E85B] text-[#1E0A30] p-3 rounded-full hover:bg-white transition-colors duration-300"
+                className="bg-[#5454C5] text-[#1E0A30] p-3 rounded-full hover:bg-white transition-colors duration-300"
                 aria-label="Previous testimonial"
               >
                 <Arrow direction="left" />
               </button>
               <button
                 onClick={handleNext}
-                className="bg-[#A0E85B] text-[#1E0A30] p-3 rounded-full hover:bg-white transition-colors duration-300"
+                className="bg-[#5454C5] text-[#1E0A30] p-3 rounded-full hover:bg-white transition-colors duration-300"
                 aria-label="Next testimonial"
               >
                 <Arrow direction="right" />

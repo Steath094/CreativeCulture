@@ -12,7 +12,7 @@ function Banner() {
   ];
 
   return (
-    <div className="w-screen relative left-1/2 -translate-x-1/2 bg-[#7ED957] text-[#10012B] overflow-hidden py-4">
+    <div className="w-screen relative left-1/2 -translate-x-1/2 bg-[#5454C5] text-[#10012B] overflow-hidden py-4">
       <div className="flex w-max animate-marquee">
         {/* Repeat services twice for seamless loop */}
         {[...services, ...services].map((service, ind) => (

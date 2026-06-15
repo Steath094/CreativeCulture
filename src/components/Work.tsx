@@ -81,7 +81,7 @@ export default function HowWeCook() {
                 <div className="text-center absolute top-10 left-1/2 -translate-x-1/2 w-full z-10">
                     <div className="flex justify-center items-center gap-3">
                         <Image src={'/star.svg'} alt='star logo' width={42} height={42} />
-                        <h2 className="text-4xl md:text-5xl font-bold">How <span className="text-[#7ED957]">We Cook</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-bold">How <span className="text-[#5454C5]">We Cook</span></h2>
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@ export default function HowWeCook() {
 
                                 {/* Text Container */}
                                 <div>
-                                    <h4 className="text-[#7ED957] text-4xl font-medium">{activeCookStep.title}</h4>
+                                    <h4 className="text-[#5454C5] text-4xl font-medium">{activeCookStep.title}</h4>
                                     
                                     {/* MODIFIED: Map over descriptions to show all of them */}
                                     {activeCookStep.description.map((desc, index) => (

@@ -17,7 +17,7 @@ function Hero() {
                 </div>
                 <p className='text-xl'>We turn marketing mayhem into masterpiece. Let us be the artists of your brand success story. With strategy, creativity and a dash of humour, we&apos;ll make your brand stand out like a diamond in the rough.</p>
                 <div className='flex gap-4 items-center '>
-                    <button className='flex gap-2 justify-center items-center text-2xl bg-[#7ED957] text-[#10012B] font-semibold rounded-3xl px-4 py-2 text-center cursor-pointer'>Start Exploring <Image src={'./arrow.svg'} alt='arrow' width={26} height={10} /> </button>
+                    <button className='flex gap-2 justify-center items-center text-2xl bg-[#5454C5] text-[#10012B] font-semibold rounded-3xl px-4 py-2 text-center cursor-pointer'>Start Exploring <Image src={'./arrow.svg'} alt='arrow' width={26} height={10} /> </button>
                     <button className='text-2xl border-b-1'>All Services</button>
                 </div>
             </div>

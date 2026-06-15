@@ -16,10 +16,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   hasTopImage = false,
 }) => {
   const cardClasses = `p-6 rounded-xl border-2 transition-all duration-300 flex flex-col h-full
-    ${isHighlighted ? 'bg-[#7ED957] border-[#7ED957] text-[#10012B]' : 'bg-[#10012B] border-[#4A2F6B] hover:border-[#7ED957]'}`;
+    ${isHighlighted ? 'bg-[#5454C5] border-[#5454C5] text-[#10012B]' : 'bg-[#10012B] border-[#4A2F6B] hover:border-[#5454C5]'}`;
   const textColor = isHighlighted ? 'text-[#10012B]' : 'text-gray-300';
   const borderColor = isHighlighted ? 'border-[#10012B]' : 'border-[#4A2F6B]';
-  const linkColor = isHighlighted ? 'text-[#10012B]' : 'text-[#7ED957]';
+  const linkColor = isHighlighted ? 'text-[#10012B]' : 'text-[#5454C5]';
 
   const Divider = () => <hr className={`my-4 ${borderColor}`} />;
 
