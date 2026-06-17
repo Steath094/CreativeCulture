@@ -53,13 +53,13 @@ const stats = [
 
 const campaigns = [
   { title: "Farzi", image: "/campaigns/Farzi.jpeg" },
-  { title: "The Kashmir Files", image: "/campaigns/kashmir-files.png" },
-  { title: "Sirf Ek Bandaa Kaafi Hai", image: "/campaigns/sirf-ek-bandaa-kaafi-hai.png" },
-  { title: "Farzi 1", image: "/campaigns/farzi.png"},
-  { title: "Citadel", image: "/campaigns/citadel.png"},
-  { title: "Culpa Tuya", image: "/campaigns/culpa-tuya.png"},
-  { title: "Gadar 2", image: "/campaigns/gadar2.png"},
-  { title: "Haddi", image: "/campaigns/haddi.png"},
+  { title: "Bandaa", image: "/campaigns/Bandaa.jpeg" },
+  { title: "Chhal Kapat", image: "/campaigns/chhalKapat.jpg" },
+  { title: "Lollapalooza", image: "/campaigns/lollapalooza.jpeg"},
+  { title: "Mismatched", image: "/campaigns/mismatched.jpeg"},
+  { title: "Off Campus", image: "/campaigns/offCampus.jpeg"},
+  { title: "Saiyaara", image: "/campaigns/saiyaara.jpeg"},
+  { title: "The Royals", image: "/campaigns/theRoyals.jpeg"},
 ];
 
 const clients = [
@@ -74,66 +74,74 @@ const clients = [
   { tag: "#efgh", by: "Tata Neu", image: "/clients/tataneu.svg",className: "p-2" },
   { tag: "#ijkl", by: "Flipkart", image: "/clients/flipkart.svg",className: "p-2" },
   { tag: "#mnop", by: "Sony liv", image: "/clients/sonyliv.png" },
+  { tag: "#4fd", by: "Bajaj", image: "/clients/bajaj.svg",className: "p-2" },
+  { tag: "#4twg", by: "Crocs", image: "/clients/crocs.svg" },
+  { tag: "#mgrp", by: "Freakins", image: "/clients/freakins.png" },
+  { tag: "#m4fdp", by: "Mogu Mogu", image: "/clients/mogumogu.png" },
+  { tag: "#mn4twsdgv", by: "Myntra", image: "/clients/myntra.svg",className: "p-2"},
+  { tag: "#mnop425", by: "Probo", image: "/clients/probo.svg",className: "p-2" },
+  { tag: "#34tger", by: "Samsung", image: "/clients/samsung.svg",className: "p-2" },
+  { tag: "#23fwe", by: "T Series", image: "/clients/tseries.svg",className: "p-2" },
 ];
 
 const services = [
   {
     number: "01.",
     title: "Meme Marketing",
-    image: "/cook4.webp",
+    image: "/services/meme.jpg",
     body: "We help brands tap into internet culture through content that feels native to social media and sparks genuine engagement.",
   },
   {
     number: "02.",
     title: "Influencer Marketing",
-    image: "/cook5.webp",
+    image: "/services/influencers.jpg",
     body: "From niche creators to large-scale influencers, we connect brands with the right voices to drive awareness, credibility, and results.",
   },
   {
     number: "03.",
     title: "Social Media Management",
-    image: "/Hero.svg",
+    image: "/services/social.jpg",
     body: "We manage content, publishing, strategy, and audience engagement to ensure your brand remains active, consistent, and relevant.",
   },
+  // {
+  //   number: "04.",
+  //   title: "Content Marketing",
+  //   image: "/image 2.png",
+  //   body: "We create content that informs, entertains, and builds long-term trust with your audience.",
+  // },
+  // {
+  //   number: "05.",
+  //   title: "Digital Marketing",
+  //   image: "/image 2.png",
+  //   body: "We design and execute campaigns that increase visibility, generate leads, and support business growth.",
+  // },
   {
     number: "04.",
-    title: "Content Marketing",
-    image: "/image 2.png",
-    body: "We create content that informs, entertains, and builds long-term trust with your audience.",
-  },
-  {
-    number: "05.",
-    title: "Digital Marketing",
-    image: "/image 2.png",
-    body: "We design and execute campaigns that increase visibility, generate leads, and support business growth.",
-  },
-  {
-    number: "06.",
     title: "Celebrity PR",
-    image: "/image 2.png",
+    image: "/services/celeb.jpg",
     body: "We help brands build stronger market presence through strategic celebrity associations, collaborations, and media visibility opportunities.",
   },
 ];
 
-const work = [
-  { title: "Hook-step ignition", image: "/cook1.webp" },
-  { title: "Creator seeding sprint", image: "/cook2.webp" },
-  { title: "Meme page takeover", image: "/cook3.webp" },
-  { title: "Festival social pulse", image: "/cook4.webp" },
-];
+// const work = [
+//   { title: "Hook-step ignition", image: "/cook1.webp" },
+//   { title: "Creator seeding sprint", image: "/cook2.webp" },
+//   { title: "Meme page takeover", image: "/cook3.webp" },
+//   { title: "Festival social pulse", image: "/cook4.webp" },
+// ];
 
-const achievements = [
-  {
-    title: "Best Web Original Award",
-    label: "BANDAA",
-    image: "/vijay.avif",
-  },
-  {
-    title: "Best Use of Memes & Emojis",
-    label: "Applause Entertainment TANAAV",
-    image: "/alia.jpg",
-  },
-];
+// const achievements = [
+//   {
+//     title: "Best Web Original Award",
+//     label: "BANDAA",
+//     image: "/vijay.avif",
+//   },
+//   {
+//     title: "Best Use of Memes & Emojis",
+//     label: "Applause Entertainment TANAAV",
+//     image: "/alia.jpg",
+//   },
+// ];
 
 const sectionReveal = {
   hidden: { opacity: 0, y: 34 },
@@ -219,17 +227,17 @@ export default function Home() {
   const [showAllCampaigns, setShowAllCampaigns] = useState(false);
   const [showAllClients, setShowAllClients] = useState(false);
   const [activeService, setActiveService] = useState(0);
-  const [workIndex, setWorkIndex] = useState(0);
+  // const [workIndex, setWorkIndex] = useState(0);
   const [activePhase, setActivePhase] = useState(0);
 
   const visibleCampaigns = showAllCampaigns ? campaigns : campaigns.slice(0, 4);
   const visibleClients = showAllClients ? clients : clients.slice(0, 4);
   const activeHero = heroFrames[heroIndex];
-  const activeWork = work[workIndex];
+  // const activeWork = work[workIndex];
 
   const closeMenu = () => setMenuOpen(false);
-  const nextWork = () => setWorkIndex((index) => (index + 1) % work.length);
-  const prevWork = () => setWorkIndex((index) => (index - 1 + work.length) % work.length);
+  // const nextWork = () => setWorkIndex((index) => (index + 1) % work.length);
+  // const prevWork = () => setWorkIndex((index) => (index - 1 + work.length) % work.length);
 
   return (
     <main id="home" className="min-h-screen overflow-hidden bg-[#10012B] text-white">
@@ -333,7 +341,7 @@ export default function Home() {
                 {activeHero?.eyebrow}
               </p> */}
               <h1 className="max-w-4xl text-3xl font-black uppercase leading-[0.9] text-white md:text-4xl lg:text-5xl">
-                Making <h2 className="text-7xl font-extrabold bg-gradient-to-r from-[#5454C5]  to-[#639CD9] bg-clip-text text-transparent">Brands </h2> Part of Everyday Culture
+                Making <span className="text-7xl font-extrabold bg-gradient-to-r from-[#5454C5]  to-[#639CD9] bg-clip-text text-transparent">Brands </span> Part of Everyday Culture
               </h1>
             </motion.div>
           </AnimatePresence>
@@ -577,7 +585,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+      {/* <section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading kicker="Work" title="Sneakpeek" align="left" />
           <div className="flex gap-3">
@@ -639,14 +647,14 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       <Banner/>
 
           {/* achievement */}
-      {<section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+      {/* {<section className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
                 <Testimonial />
   
-      </section>  }
+      </section>  } */}
             {/* mail us  */}
       <section className="relative px-5 py-24 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
