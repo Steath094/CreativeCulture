@@ -5,19 +5,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowUpRight,
-  ChevronLeft,
-  ChevronRight,
-  Instagram,
-  Linkedin,
   Mail,
   Menu,
-  Play,
   X,
-  Youtube,
 } from "lucide-react";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
-import Testimonial from "@/components/Testimonial";
+import Connection from "@/components/Connection";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -228,7 +222,6 @@ export default function Home() {
   const [showAllClients, setShowAllClients] = useState(false);
   const [activeService, setActiveService] = useState(0);
   // const [workIndex, setWorkIndex] = useState(0);
-  const [activePhase, setActivePhase] = useState(0);
 
   const visibleCampaigns = showAllCampaigns ? campaigns : campaigns.slice(0, 4);
   const visibleClients = showAllClients ? clients : clients.slice(0, 4);
@@ -453,7 +446,7 @@ export default function Home() {
               About
             </p>
             <h2 className="text-4xl font-black uppercase leading-[0.95] text-white md:text-6xl">
-            <h2 className="text-7xl font-extrabold bg-gradient-to-r from-[#5454C5]  to-[#639CD9] bg-clip-text text-transparent">Building </h2> Brands People Talk About
+            <span className="text-7xl font-extrabold bg-gradient-to-r from-[#5454C5]  to-[#639CD9] bg-clip-text text-transparent">Building </span> Brands People Talk About
             </h2>
           </div>
           <div className="grid gap-6 text-lg leading-8 text-white/72">
@@ -655,6 +648,7 @@ export default function Home() {
                 <Testimonial />
   
       </section>  } */}
+      <Connection />
             {/* mail us  */}
       <section className="relative px-5 py-24 text-center lg:px-8">
         <div className="mx-auto max-w-4xl">
@@ -672,35 +666,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <footer className="border-t border-white/10 px-5 py-8 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
-          <a href="#home" className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-[8px] bg-[#5454C5] font-black text-[#10012B]">
-              CC
-            </span>
-            <span className="text-sm font-black uppercase">Creative Culture</span>
-          </a>
-          <p className="text-sm text-white/55">
-            Copyright 2026 Creative Culture. All Rights Reserved.
-          </p>
-          <div className="flex items-center gap-3">
-            {[
-              { icon: Instagram, label: "Instagram" },
-              { icon: Linkedin, label: "LinkedIn" },
-              { icon: Youtube, label: "YouTube" },
-            ].map(({ icon: Icon, label }) => (
-              <a
-                key={label}
-                aria-label={label}
-                href="#home"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/15 text-[#5454C5] hover:border-[#5454C5] hover:bg-[#5454C5] hover:text-[#10012B]"
-              >
-                <Icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </footer> */}
       <div className="border-t border-white/10 px-5 lg:px-20">
         <Footer />
       </div>
